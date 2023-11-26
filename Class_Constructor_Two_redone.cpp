@@ -10,7 +10,7 @@ private:
 	double fee_paid, fee_balance;
 public:
     Student(int units, double fee);
-    Student(char adm[20], char jina[25], int units, double fee);
+    Student(char adm[], char jina[], int units, double fee);
     void inputs();
     void calculations();
     void output();
@@ -47,7 +47,7 @@ Student::Student(int units, double fee)
 	number_of_units = units;
 	fee_paid = fee;
 }
-Student::Student(char adm[20], char jina[25], int units, double fee)
+Student::Student(char adm[], char jina[], int units, double fee)
 {
     strcpy(adm_no,adm);
     strcpy(name,jina);
