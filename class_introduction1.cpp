@@ -25,27 +25,19 @@ int main()
         mypackage.calculation();
         mypackage.output();
         return 0;
-
 }
 void package::input()
-
 {
     cout<<"Enter your weight(grams): ";
     cin>>weight;
 }
 void package::calculation()
-
 {
     convert_Grams_To_Kilograms = (weight)/kilograms;
-    
     (int(weight)%1000==0)?cout<<weight<<" It takes such packages to form one kilogram":cout<<"It takes "
     <<1000/(int(weight) % 1000)<<" number of packages to form one kilogram"<<endl;
-
-
 }
-
 void package::output()
-
 {
     cout<<"The weight of the package is "<< convert_Grams_To_Kilograms <<" kilograms";
 } 

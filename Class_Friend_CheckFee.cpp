@@ -6,34 +6,43 @@ class Student
 private:
 	char adm_no[20],name[25];
 	int number_of_units;
-	double fee_paid, fee_balance;
+	double fee_paid, fee_balance,compare_fee;
 public:
-    Student(int units, double fee);//constructors
     void inputs();
     void calculations();
+    friend double compare_fee(Student stud1,Student stud2);//friend function
     void output();
 };
-int main()
-{
-	Student stud1(7, 38000);//constructors
-	cout<<"Analysis for the student (the first time):"
-		<<"\n<=========================================>";
-    stud1.calculations();
-	stud1.output();
-	cout<<"\n\nData entry for the student:\n"
+int main(){
+	Student stud1;
+    Student stud2;
+	cout<<"\n\nData entry for student one:\n"
 		<<"<============================>\n";
 	stud1.inputs(); //stud1.fee_paid = 87000;
 	stud1.calculations();
-	cout<<"\n\nAnalysis for the student (the second time):"
+    cout<<"\n\nData entry for student two:\n"
+		<<"<============================>\n";
+	stud2.inputs(); //stud1.fee_paid = 87000;
+	stud2.calculations();
+	cout<<"\n\nAnalysis for student one:"
 		<<"\n<=============================================>";
 	stud1.output();
+    cout<<"\n\nThe student has payed Kshs. "<<compare_fee(stud1,stud2);
+    cout<<"\n\nAnalysis for student Two:"
+		<<"\n<=============================================>";
+	stud2.output();
+     //cout<<"\n\nThe student has payed Kshs. "<<compare_fee(stud2);
+
+    if(compare_fee(stud1, stud2))
+    {
+        cout<<"\n\n The two Students have paid equal fee.";
+    }
+    else
+    {
+        cout<<"\n\n The two Students have NOT paid equal fee.";
+    }
 	cout<<"\n\n";
 	return 0;
-}
-Student::Student(int units, double fee)//constructor
-{
-	number_of_units = units;
-	fee_paid = fee;
 }
 void Student::inputs(){
     cout<<"Enter the admission number of the student: ";
@@ -54,4 +63,9 @@ void Student::output(){
 		<<"\nUnits: "<<number_of_units
 		<<"\nFee Paid: "<<fee_paid
 		<<"\nFee Balance: "<<fee_balance;
+}
+double compare_fee(Student stud1,Student stud2)
+{
+   return stud1.fee_paid,stud2.fee_paid;
+   
 }

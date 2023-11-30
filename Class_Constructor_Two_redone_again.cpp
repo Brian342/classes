@@ -68,8 +68,6 @@ Student::Student(char adm[], char jina[], int units, double fee)
 	number_of_units = units;
 	fee_paid = fee;
 }
-
-
 void Student::inputs(){
     cout<<"Enter the admission number of the student: ";
 	cin>>adm_no;
@@ -80,11 +78,9 @@ void Student::inputs(){
 	cout<<"Enter the fee he/she has paid: ";
 	cin>>fee_paid;
 }
-
 void Student::calculations(){
    fee_balance = FEE_PAYABLE - fee_paid;
 }
-
 void Student::output(){
     cout<<"\nAdmission Number: "<<adm_no
 		<<"\nName: "<<name

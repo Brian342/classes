@@ -14,20 +14,21 @@ Public member functions:
 #include<iostream>
 #include<string.h>
 using namespace std;
-class Member{
+class Member
+{
 private:
     char full_name[20];
     int marks;
     char grades;
-    char Reg_no[20];
+    char Reg_no[25];
 public:
     Member(char Reg[25], char name[20], int mark, char grade); //constructor
     void input();
     void display(); 
-};
+}; 
 int main()
 {
-     Member Prog1("SCT221-0181/2023", "Brian Kimanzi", 70, 'A');
+    Member Prog1("SCT221-0181/2023", "Brian Kimanzi", 70, 'A');
     cout<<"Print prog1"
     <<"--------------------->";
     void input();
@@ -52,7 +53,8 @@ void Member::input()
     cout<<"Enter the grade->";
     cin>>grades;
 }
-void Member::display(){
+void Member::display()
+{
     cout<<"Your name is->" <<full_name;
     cout<<"Your marks are->" <<marks;
     cout<<"Your grade is->"<<grades;

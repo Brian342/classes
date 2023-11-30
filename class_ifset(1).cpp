@@ -18,23 +18,19 @@ class pub
 private:
     int choice;
     int bottles;
-
 public:
     void input();
     void calculation();
-    
 };
 int main()
 {
         pub myclub;
-
         cout<<"* * * Jamal and Daughters pub * * *"<<endl;
         cout<<"Beer Brand                       price"<<endl;
         cout<<"1) Tusker                         100/="<<endl;
         cout<<"2) pilsner                        120/="<<endl;
         cout<<"3) smirnoff_ice                   140/="<<endl;
         cout<<"4) white_cap                       90/="<<endl;
-
         myclub.input();
         myclub.calculation();
        
@@ -52,7 +48,6 @@ void pub::calculation()
     if(choice==1)
     {
         cout<<bottles<<" bottles of Tusker will cost you:"<<bottles * 100<<endl;
-
     }
     else if(choice==2)
     {

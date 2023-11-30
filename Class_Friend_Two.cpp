@@ -8,14 +8,13 @@ private:
 	int number_of_units;
 	double fee_paid, fee_balance;
 public:
-    Student(int units, double fee);//constructors
     void inputs();
     void calculations();
+    friend string get_admission(Student stud);//friend function
     void output();
 };
-int main()
-{
-	Student stud1(7, 38000);//constructors
+int main(){
+	Student stud1;
 	cout<<"Analysis for the student (the first time):"
 		<<"\n<=========================================>";
     stud1.calculations();
@@ -27,13 +26,9 @@ int main()
 	cout<<"\n\nAnalysis for the student (the second time):"
 		<<"\n<=============================================>";
 	stud1.output();
+    cout<<"\n\nThe students admission number is. "<<get_admission(stud1);
 	cout<<"\n\n";
-	return 0;
-}
-Student::Student(int units, double fee)//constructor
-{
-	number_of_units = units;
-	fee_paid = fee;
+	
 }
 void Student::inputs(){
     cout<<"Enter the admission number of the student: ";
@@ -54,4 +49,8 @@ void Student::output(){
 		<<"\nUnits: "<<number_of_units
 		<<"\nFee Paid: "<<fee_paid
 		<<"\nFee Balance: "<<fee_balance;
+}
+string get_admission(Student stud)
+{
+   return stud.adm_no;
 }

@@ -27,14 +27,12 @@ public:
 int main()
 {
         pub myclub;
-
         cout<<"* * * Jamal and Daughters pub * * *"<<endl;
         cout<<"Beer Brand                       price"<<endl;
         cout<<"1) Tusker                         100/="<<endl;
         cout<<"2) pilsner                        120/="<<endl;
         cout<<"3) smirnoff_ice                   140/="<<endl;
         cout<<"4) white_cap                       90/="<<endl;
-
         myclub.input();
         myclub.calculation();
        

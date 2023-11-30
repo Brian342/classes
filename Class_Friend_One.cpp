@@ -13,8 +13,7 @@ public:
     friend double get_fee_paid(Student stud);//friend function
     void output();
 };
-int main()
-{
+int main(){
 	Student stud1;
 	cout<<"Analysis for the student (the first time):"
 		<<"\n<=========================================>";

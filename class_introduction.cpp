@@ -13,18 +13,15 @@ public:
    void calculation();
    void output();
 };
-
 int main()
 {
         sums sumation;
-        
         cout<<"Calculations;";
         sumation.input();
         sumation.calculation();
         sumation.output();
         cout<<"/n/n";
         return 0;
-
 }
  void sums::input()
  {
@@ -37,7 +34,6 @@ int main()
  }
  void sums::calculation()
  {
-    
     sum = num1 + num2 + num3;
     product = num1 * num2 * num3;
     average = sum /3.0;

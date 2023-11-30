@@ -38,7 +38,6 @@ void Distance::calculation()
     convert_metres_to_kilometres=metres/1000;
     convert_minutes_to_seconds=time/60;
     speed=convert_metres_to_kilometres/convert_minutes_to_seconds;
-
 }
 void Distance::output()
 {
